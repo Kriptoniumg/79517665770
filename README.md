@@ -65,10 +65,10 @@
     nc: 3
     names: ['grebnik', 'brakonier', 'tyrist']
   **Фикс**
-    ```bash
+  ```bash
     pip uninstall torch torchvision torchaudio -y
     pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-    ```
+  ```
 ## Обучение
     ```bash
     yolo detect train model=yolov8n.pt data=/home/clover/clover_yolo/dataset.yaml epochs=100 imgsz=320 batch=8 name=clover_objects
