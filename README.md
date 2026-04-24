@@ -26,7 +26,24 @@
   marker_image[1:marker_border_bits - 1, 1:marker_border_bits - 1] = cv2.aruco.generateImageMarker(
     aruco_dict, marker.id_, marker_outer_bits, borderBits=1)
   ```
+  **Рашрирение памяти**
+  ```bash
+  sudo apt install cloud-guest-utils
 
+
+  sudo growpart /dev/sda 2
+
+
+  sudo partprobe /dev/sda
+
+
+  sudo partprobe /dev/sda 5
+
+
+  sudo partprobe /dev/sda
+
+
+  sudo resize2fs /dev/sda5
 ---
 
 ## 📹 Yolo
@@ -47,11 +64,12 @@
 
     nc: 3
     names: ['grebnik', 'brakonier', 'tyrist']
+   
     ```bash
     pip uninstall torch torchvision torchaudio -y
     pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
     ```
-    **Обучение
+## Обучение
     ```bash
     yolo detect train model=yolov8n.pt data=/home/clover/clover_yolo/dataset.yaml epochs=100 imgsz=320 batch=8 name=clover_objects
     cp runs/detect/clover_detector/weights/best.pt /home/clover/
@@ -59,7 +77,8 @@
     Проверка на отдельном изображении:
     ```bash
     yolo predict model=/home/clover/best.pt source=/home/clover/my_dataset/val/images/frame_00007.jpg imgsz=320
-Базовый фрагмент для инициализации видеозаписи:
+    ```
+## Базовый фрагмент для инициализации видеозаписи:
 
 ```python
 import rospy
