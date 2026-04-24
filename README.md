@@ -15,7 +15,7 @@
 ## ⚙️ Виртуалка
 
 - /home/rosbase/catkin_ws/src/clover/clover_simulation/src/clover_simulation/marker.py
-- 130 строчке
+  130 строчка
 - Вместо
 - ```python
   marker_image[1:marker_border_bits - 1, 1:marker_border_bits - 1] = cv2.aruco.drawMarker(
@@ -29,12 +29,28 @@
 
 ---
 
-## 📹 Сбор данных
+## 📹 Yolo
 
-Для обучения модели необходимо записать видео с бортовой камеры дрона, на котором присутствуют целевые объекты.  
-Пример кода для захвата видео во время полёта можно найти в статье на Habr:  
-[«Распознавание объектов с помощью YOLO на дроне Clover»](https://habr.com/ru/articles/821971/) (раздел «Запись видео»).  
+## 🏷️ Разметка датасета
 
+1. **Создайте структуру папок** в терминале Linux:
+   ```bash
+   mkdir -p clover_yolo/{train/{images,labels},val/{images,labels}}
+2. ** dataset.yaml**
+   ```bash
+   nano dataset.yaml
+   ```
+   ```yaml
+   # dataset.yaml
+    train: /home/clover/clover_yolo/train/images
+    val: /home/clover/clover_yolo/val/images
+
+    nc: 3
+    names: ['grebnik', 'brakonier', 'tyrist']
+```bash
+pip uninstall torch torchvision torchaudio -y
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+```
 Базовый фрагмент для инициализации видеозаписи:
 
 ```python
