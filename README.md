@@ -14,13 +14,18 @@
 
 ## ⚙️ Виртуалка
 
-- **Дрон COEX Clover** (физический или симулятор Gazebo)
-- **ROS** + пакет `clover` (см. [официальную документацию](https://clover.coex.tech/))
-- **Python 3.8+** с установленными библиотеками:
-  - `ultralytics` (YOLOv8)
-  - `opencv-python`
-  - `cv_bridge`, `tf2_geometry_msgs` (доступны в ROS-окружении)
-- **Инструмент разметки**: [LabelImg](https://github.com/HumanSignal/labelImg) или [Roboflow](https://roboflow.com/)
+- /home/rosbase/catkin_ws/src/clover/clover_simulation/src/clover_simulation/marker.py
+- 130 строчке
+- Вместо
+- ```python
+  marker_image[1:marker_border_bits - 1, 1:marker_border_bits - 1] = cv2.aruco.drawMarker(
+    aruco_dict, marker.id_, marker_outer_bits)
+  ```
+- На
+- ```python
+  marker_image[1:marker_border_bits - 1, 1:marker_border_bits - 1] = cv2.aruco.generateImageMarker(
+    aruco_dict, marker.id_, marker_outer_bits, borderBits=1)
+  ```
 
 ---
 
