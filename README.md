@@ -64,7 +64,7 @@
 
     nc: 3
     names: ['grebnik', 'brakonier', 'tyrist']
-   
+  **Фикс**
     ```bash
     pip uninstall torch torchvision torchaudio -y
     pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
