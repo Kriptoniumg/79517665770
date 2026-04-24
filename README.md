@@ -70,14 +70,14 @@
     pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
   ```
 ## Обучение
-    ```bash
+  ```bash
     yolo detect train model=yolov8n.pt data=/home/clover/clover_yolo/dataset.yaml epochs=100 imgsz=320 batch=8 name=clover_objects
     cp runs/detect/clover_detector/weights/best.pt /home/clover/
-    ```
+  ```
     Проверка на отдельном изображении:
-    ```bash
+  ```bash
     yolo predict model=/home/clover/best.pt source=/home/clover/my_dataset/val/images/frame_00007.jpg imgsz=320
-    ```
+  ```
 ## Базовый фрагмент для инициализации видеозаписи:
 
 ```python
