@@ -91,7 +91,19 @@
   ```bash
     cp runs/detect/clover_detector/weights/best.pt /home/clover/
   ```
-    Проверка на отдельном изображении:
+  Проверка на отдельном изображении:
   ```bash
-    yolo predict model=/home/clover/best.pt source=/home/clover/my_dataset/val/images/frame_00007.jpg imgsz=320
+      yolo predict model=/home/clover/best.pt source=/home/clover/clover_yolo/val/images/imiapomenai.jpg imgsz=320
+  ```
+---
+##Sudo apt update
+  ```bash
+  sudo nano /etc/apt/sources.list
+```
+
+поменять это: deb http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
+
+на вот это: 
+  ```bash
+deb http://legacy.raspbian.org/raspbian/ buster main contrib non-free rpi
   ```
