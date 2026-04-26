@@ -96,7 +96,7 @@
       yolo predict model=/home/clover/best.pt source=/home/clover/clover_yolo/val/images/imiapomenai.jpg imgsz=320
   ```
 ---
-##Sudo apt update
+## Sudo apt update
   ```bash
   sudo nano /etc/apt/sources.list
 ```
