@@ -85,9 +85,14 @@
   sudo nano /etc/apt/sources.list
 ```
 
-поменять это: deb http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
-
+поменять это:
+  ```bash
+deb http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
+```
 на вот это: 
   ```bash
 deb http://legacy.raspbian.org/raspbian/ buster main contrib non-free rpi
   ```
+---
+**Как пользоваться YOLO можно найти здесь:
+https://habr.com/ru/articles/821971/**
