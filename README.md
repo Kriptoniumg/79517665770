@@ -79,10 +79,6 @@
   ```bash
     cp runs/detect/clover_detector/weights/best.pt /home/clover/
   ```
-  Проверка на отдельном изображении:
-  ```bash
-      yolo predict model=/home/clover/best.pt source=/home/clover/clover_yolo/val/images/imiapomenai.jpg imgsz=320
-  ```
 ---
 ## Sudo apt update
   ```bash
