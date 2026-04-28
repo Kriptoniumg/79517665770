@@ -1,6 +1,6 @@
 # Нюансы при работе с Clover/Техник 🚁
 
-## ⚙️ Виртуалка
+## ⚙️ Gazebo & Yolo
 
 - /home/rosbase/catkin_ws/src/clover/clover_simulation/src/clover_simulation/marker.py
   130 строчка
@@ -80,18 +80,6 @@
     cp runs/detect/clover_detector/weights/best.pt /home/clover/
   ```
 ---
-## Sudo apt update
-  ```bash
-  sudo nano /etc/apt/sources.list
-```
-
-поменять это:
-  ```bash
-deb http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
-```
-на вот это: 
-  ```bash
-deb http://legacy.raspbian.org/raspbian/ buster main contrib non-free rpi
   ```
 ---
 **Как пользоваться YOLO можно найти здесь:
