@@ -4,22 +4,7 @@
   **Рашрирение памяти**
   ```bash
   sudo apt install cloud-guest-utils
-
-
-  sudo growpart /dev/sda 2
-
-
-  sudo partprobe /dev/sda
-
-
-  sudo partprobe /dev/sda 5
-
-
-  sudo partprobe /dev/sda
-
-
-  sudo resize2fs /dev/sda5
-
+  
   df -h /
 
   sudo growpart /dev/sda 2
