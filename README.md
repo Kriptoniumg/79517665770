@@ -29,6 +29,7 @@
   sudo partprobe /dev/sda
 
   sudo resize2fs /dev/sda5
+```
 ---
 
 ## 📹 Yolo
