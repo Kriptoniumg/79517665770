@@ -49,7 +49,7 @@
     val: /home/clover/clover_yolo/val/images
 
     nc: 3
-    names: ['grebnik', 'brakonier', 'tyrist']
+    names: ['name1', 'name2', 'name3']
   **labelImg**
   ```bash
     pip install labelImg
