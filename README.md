@@ -1,19 +1,6 @@
 # Нюансы при работе с Clover/Техник 🚁
 
 ## ⚙️ Gazebo & Yolo
-
-- /home/rosbase/catkin_ws/src/clover/clover_simulation/src/clover_simulation/marker.py
-  130 строчка
-- Вместо
-- ```python
-  marker_image[1:marker_border_bits - 1, 1:marker_border_bits - 1] = cv2.aruco.drawMarker(
-    aruco_dict, marker.id_, marker_outer_bits)
-  ```
-- На
-- ```python
-  marker_image[1:marker_border_bits - 1, 1:marker_border_bits - 1] = cv2.aruco.generateImageMarker(
-    aruco_dict, marker.id_, marker_outer_bits, borderBits=1)
-  ```
   **Рашрирение памяти**
   ```bash
   sudo apt install cloud-guest-utils
