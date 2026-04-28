@@ -80,7 +80,5 @@
     cp runs/detect/clover_detector/weights/best.pt /home/clover/
   ```
 ---
-  ```
----
 **Как пользоваться YOLO можно найти здесь:
 https://habr.com/ru/articles/821971/**
